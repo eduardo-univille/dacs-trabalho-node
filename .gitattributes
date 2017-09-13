@@ -1,0 +1,8 @@
+# Images
+*.gif binary
+*.jpg binary
+*.png binary
+
+# Minify
+*.min.css binary
+*.min.js binary
