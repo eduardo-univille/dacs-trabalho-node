@@ -6,3 +6,10 @@ body {
 a {
   color: #00B7FF;
 }
+
+.list {
+  margin: 20px 0;
+}
+.list .list-header {
+  background-color: #f0f0f0;
+}
