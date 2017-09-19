@@ -48,4 +48,11 @@ router.post('/edit/:id', function(req, res, next) {
 });
 
 
+router.get('/remove/:id', function(req, res, next) {
+  dao.anime.remove(req.params.id, function(err, rows, fields) {
+    res.redirect('/animes');
+  });
+});
+
+
 module.exports = router;

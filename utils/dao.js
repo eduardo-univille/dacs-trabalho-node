@@ -31,5 +31,9 @@ module.exports = {
         )
       }
     },
+    remove: function(id, callback) {
+      var conn = database.init();
+      conn.query('DELETE FROM anime WHERE id = ?', [id], callback);
+    },
   },
 };

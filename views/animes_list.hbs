@@ -4,6 +4,7 @@
   <div class="row list-header">
     <div class="col">Nome</div>
     <div class="col">Episódios</div>
+    <div class="col"></div>
   </div>
 
   {{#each animes}}
@@ -12,6 +13,9 @@
         <a href="/animes/edit/{{id}}">{{nome}}</a>
       </div>
       <div class="col">{{episodios}}</div>
+      <div class="col">
+        <a href="/animes/remove/{{id}}" onclick="return confirm('Remover {{nome}}?')">[Remover]</a>
+      </div>
     </div>
   {{/each}}
 </div>
