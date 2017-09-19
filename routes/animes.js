@@ -27,4 +27,25 @@ router.post('/add', function(req, res, next) {
 });
 
 
+router.get('/edit/:id', function(req, res, next) {
+  dao.anime.get(req.params.id, function(error, rows, fields) {
+    res.render('animes_form', {
+      title: 'Edita anime',
+      anime: rows[0],
+    });
+  });
+});
+
+
+router.post('/edit/:id', function(req, res, next) {
+  dao.anime.save({
+    id: req.params.id,
+    nome: req.body.nome,
+    episodios: req.body.episodios,
+  }, function(err, rows, fields) {
+    res.redirect('/animes');
+  });
+});
+
+
 module.exports = router;

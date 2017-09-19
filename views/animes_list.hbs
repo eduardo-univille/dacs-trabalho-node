@@ -8,7 +8,9 @@
 
   {{#each animes}}
     <div class="row">
-      <div class="col">{{nome}}</div>
+      <div class="col">
+        <a href="/animes/edit/{{id}}">{{nome}}</a>
+      </div>
       <div class="col">{{episodios}}</div>
     </div>
   {{/each}}
