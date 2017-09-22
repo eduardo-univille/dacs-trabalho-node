@@ -1,0 +1,18 @@
+{
+  "name": "dacs-animes-node",
+  "description": "Exemplo de CRUD em node",
+  "keywords": [
+    "node"
+  ],
+  "repository": "https://github.com/eduardo-univille/dacs-trabalho-node.git",
+  "sucess_url": "/",
+  "scripts": {
+    "postdeploy": "npm run createdb"
+  },
+  "env": {
+    "DATABASE_URL": {
+      "description": "URL para conectar no Banco de Dados.",
+      "value": "mysql://user:pass@server:3306/database"
+    }
+  }
+}

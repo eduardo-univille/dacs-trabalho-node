@@ -1,0 +1,15 @@
+#!/usr/bin/env node
+
+var database = require('../utils/database');
+var conn = database.init();
+conn.query(
+  'CREATE TABLE anime (' +
+  '  id INT PRIMARY KEY auto_increment,' +
+  '  nome VARCHAR(200),' +
+  '  episodios INT' +
+  ');'
+, function(error, rows, fields) {
+  if (error) throw error;
+  console.log('Estrutura do Banco de Dados criada!!!')
+  process.exit();
+});
